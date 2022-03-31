@@ -4,7 +4,6 @@
 
 TEST(SimpleTests, JustWorks) {
     std::string filename = std::string(std::filesystem::current_path()) + "/testfiles/simple.txt";
-    std::cout << filename;
     solution sol(filename);
     ASSERT_EQ(sol.containsStr("hello"), 0);
 
@@ -15,7 +14,6 @@ TEST(SimpleTests, JustWorks) {
 
 TEST(SimpleTests, Multilines) {
     std::string filename = std::string(std::filesystem::current_path()) + "/testfiles/bigger.txt";
-    std::cout << filename;
     solution sol(filename);
     ASSERT_EQ(sol.containsStr("tristique"), 1491);
 
